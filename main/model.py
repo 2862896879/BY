@@ -473,8 +473,8 @@ class BaseModel(models.Model):
         newParams = {}
         for k, v in params.items():
             if k in column_list:
-                ret1 = re.findall("\d{4}-\d{2}-\d{2}", str(v))
-                ret2 = re.findall("\d{2}:\d{2}:\d{2}", str(v))
+                ret1 = re.findall("\\d{4}-\\d{2}-\\d{2}", str(v))
+                ret2 = re.findall("\\d{2}:\\d{2}:\\d{2}", str(v))
                 if len(ret1) > 0 and  len(ret2) > 0:
                     newParams[k] ="{} {}".format( ret1[0],ret2[0])
                 else:

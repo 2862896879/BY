@@ -1,4 +1,9 @@
-"""dj2 URL Configuration
+"""
+2026.11.01 使用 re_path 替代 url
+错误示例：from django.conf.urls import url
+正确：from django.urls import re_path as url
+
+dj2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -16,7 +21,7 @@ Including another URLconf
 import os
 from django.contrib import admin
 from django.urls import path,include,re_path
-from django.conf.urls import url
+from django.urls import re_path as url
 from django.views.static import serve
 from django.views.generic import TemplateView
 
